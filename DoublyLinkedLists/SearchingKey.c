@@ -10,18 +10,19 @@ struct node
 
 int search(struct node *last, int key)
 {
-    //Write your code here
-    while (last != NULL){
-        if (last->data == key){
+    //Write your code here // Here only *last is used as we dont need to modify but just traverse.
+    struct node *temp = last; 
+    while (temp != NULL){
+        if (temp->data == key){
             return 1;
         }
-        last = last->prev;
+        temp = temp->prev;
     }
     return -1;
     
 }
 
-//Don't change the below code
+//Don't change the below code //Here ** is used for call by reference, where we need to modify the head's value.
 void addFirst(struct node **head, int val)
 {
     struct node *newNode = malloc(sizeof(struct node));
