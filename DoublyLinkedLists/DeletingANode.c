@@ -33,7 +33,43 @@ void deleteNode(struct node **head, int key)
     
     
 }
-    
+
+
+// Another method
+// void delNode(struct node **headptr, int val){
+//     struct node *temp = *headptr;
+//     if ((*headptr)->data == val){
+//         *headptr = (*headptr)->next;
+//         if (*headptr != NULL){
+//             (*headptr)->prev = NULL;
+//         }
+//         free(temp);
+//     }
+//     else {
+//         while (temp->next->data != val){
+//             temp = temp->next;
+//             if (temp->next == NULL){
+//                 printf("Element not found\n");
+//                 return;
+//             }
+//         }
+//         struct node *current = temp;
+//         temp = temp->next;
+//         if (temp != NULL){
+//             current->next = temp->next;
+//             if (temp->next != NULL){
+//               temp->next->prev = current;
+//             }
+//             free(temp);
+//             return;
+//         }
+//         else{
+//             current -> next = NULL;
+//             free(temp);
+//             return;
+//         }
+//     }
+// }
     
 
 
